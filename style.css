@@ -45,6 +45,12 @@ body {
   justify-content: space-between;
   padding: 24px 100px;
   align-items: center;
+  transition: 1s;
+  /* position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #fff;
+  border-bottom:1px solid rebeccapurple ; */
 }
 
 .logo {
@@ -110,6 +116,26 @@ body {
   margin-top: 50px;
 }
 
+.header:hover{
+  background-color: #fff;
+}
+
+.header:hover .logo span{
+  color: #010101;
+}
+
+.header:hover .nav-links a{
+  color: #010101;
+}
+
+.header:hover .sign{
+  color: #1d9b5e;
+  background-color: transparent;
+  border: 1px solid #1d9b5e;
+}
+
+
+
 /* header end */
 
 /* hero section start */
@@ -121,7 +147,21 @@ body {
   background-color: #29383d;
   border: 1px solid #475857;
   border-radius: 30px;
+  animation: slide 2s;
 }
+
+@keyframes tag{
+  0%{
+    transform: translate(100px);
+    opacity: 0;
+  }
+  
+  100%{
+    transform: translate(0px);
+    opacity: 1;
+  }
+  }
+
 
 .new {
   background-color: #d2f801;
@@ -145,7 +185,24 @@ body {
   font-weight: 500;
   width: 45%;
   margin: 0 auto 20px;
+ 
 }
+
+.slide{
+  animation: slide 2s;
+}
+
+@keyframes slide{
+  0%{
+    transform: translate(100px);
+    opacity: 0;
+  }
+  
+  100%{
+    transform: translate(0px);
+    opacity: 1;
+  }
+  }
 
 .inner-ctn p {
   font-size: 20px;
@@ -162,7 +219,20 @@ body {
   width: fit-content;
   justify-content: center;
   margin: 40px auto 0px;
+  animation: hero-btn 2s;
 }
+
+@keyframes hero-btn{
+  0%{
+    transform: translate(100px);
+    opacity: 0;
+  }
+  
+  100%{
+    transform: translate(0px);
+    opacity: 1;
+  }
+  }
 
 .create {
   color: #fff;
@@ -209,7 +279,21 @@ body {
   padding: 24px 100px;
   position: relative;
   margin-top: 60px;
+  animation: slide 2s;
 }
+
+@keyframes img-ctn{
+  0%{
+    transform: translate(100px);
+    opacity: 0;
+  }
+  
+  100%{
+    transform: translate(0px);
+    opacity: 1;
+  }
+  }
+
 
 .left {
   position: relative;
@@ -1072,12 +1156,15 @@ body {
 
 .Feedback h2 {
   text-align: center;
-  margin-bottom: 24px;
+  margin: 0 auto 20px;
+  width: 50%;
 }
 
 .Feedback .Feebback-p {
   text-align: center;
-  margin-bottom: 24px;
+  margin: 0 auto 50px;
+  width: 40%;
+  line-height: 1.5;
 }
 
 .feedback-box {
@@ -1315,7 +1402,7 @@ margin: 0px auto 20px;
   /* header */
 
   .hero-section {
-    padding: 40px 30px;
+    padding: 50px 30px;
   }
   .header {
     padding: 0px;
@@ -1403,7 +1490,7 @@ margin: 0px auto 20px;
   /* account */
 
   .account {
-    padding: 40px 30px;
+    padding: 50px 30px;
     flex-direction: column;
   }
 
@@ -1435,10 +1522,30 @@ margin: 0px auto 20px;
     align-items: center;
   }
 
+.right-acc{
+  width: 100%;
+}
+
+
+.right1{
+  margin: 10px;
+}
+
+.col-1{
+position: relative;
+top: 0;
+left: 0;
+}
+
+.col-3 {
+  position: relative;
+  left: 20px;
+}
+
   /* .plan */
 
   .plan {
-    padding: 40px 30px;
+    padding: 50px 30px;
   }
 
   .plan-top h2 {
@@ -1458,7 +1565,7 @@ margin: 0px auto 20px;
   }
 
   .plan-togglr {
-    width: 60%;
+    width: 70%;
     margin: 0 auto;
   }
 
@@ -1473,7 +1580,7 @@ margin: 0px auto 20px;
   /* Smart */
 
   .Smart {
-    padding: 40px 30px;
+    padding: 50px 30px;
     flex-direction: column;
   }
 
@@ -1506,7 +1613,7 @@ margin: 0px auto 20px;
   /* Freedom */
 
   .Freedom {
-    padding: 40px 30px;
+    padding: 50px 30px;
     width: 100%;
     border-radius: 0px;
   }
@@ -1536,44 +1643,38 @@ margin: 0px auto 20px;
     margin: 0 auto 28px;
     font-size: 16px;
     line-height: 1.4;
+  }
 
-}
+  /* Freedom-end */
 
-/* Freedom-end */
+  /* .Feedback */
+  .Feedback {
+    padding: 50px 30px;
+  }
 
-/* .Feedback */
-.Feedback{
-  padding: 40px 30px;
+  .Feedback h2 {
+    font-size: 30px;
+    line-height: 1.3;
+    width: 90%;
+    text-align: center;
+    margin: 0 auto 20px;
+  }
 
-}
+  .Feedback.Feedback .Feebback-p {
+    font-size: 15px;
+    line-height: 1.4;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto 40px;
+  }
 
-.Feedback h2 {
-  font-size: 30px;
-  line-height: 1.3;
-  width: 90%;
-  text-align: center;
-  margin: 0 auto 20px;
-}
+  .feedback-box {
+    flex-direction: column;
+  }
 
-.Feedback.Feedback .Feebback-p {
-  font-size: 15px;
-  line-height: 1.4;
-  text-align: center;
-  width: 100%;
-  margin: 0 auto 40px;
-}
+  .Feedback .fb-1 {
+    margin: 0 auto 20px;
+  }
 
-.feedback-box{
-  flex-direction: column;
-}
-
-.Feedback .fb-1{
-  margin: 0 auto 20px;
-}
-
-
-
-
-
-/* Feedback-end*/
+  /* Feedback-end*/
 }
